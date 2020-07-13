@@ -44,6 +44,21 @@ class InfoViewController: UIViewController {
             }
             return "order"
         }
+        let data: [String: Any] = [
+            "usageType": self.orderType!,
+            "location": GeoPoint(latitude: self.lat, longitude: self.lon),
+            "number": self.numberField.text!
+        ]
+        let doc_id: String = self.numberField.text!
+        self.db.collection("users").document(doc_id).setData(data)
+        var lookForEr: String {
+            return lookFor + "er"
+        }
+        var lookForErs: String {
+            return lookFor + "ers"
+        }
+            
+        
         // Try ordering by timestamp?
         let query = db.collection("users").whereField("usageType", isEqualTo: lookFor)
         query.getDocuments() { (querySnapshot, err) in
@@ -56,30 +71,19 @@ class InfoViewController: UIViewController {
                         self.availableMessage = ""
                         if (lookFor == "order") {
                             self.typeLabelText = "Your Orderer:"
+                            self.db.collection("users").document(self.number).delete() { err in
+                                if let err = err {
+                                    print("Error removing document: \(err)")
+                                } else {
+                                    print("Document successfully removed!")
+                                }
+                            }
+
                         } else {
                             self.typeLabelText = "Your Deliverer:"
                         }
                         self.performSegue(withIdentifier: "infoToConnection", sender: self)
                     } else {
-                        print("NONE FOUND")
-                        self.db.collection("users").addDocument(data: [
-                            "usageType": self.orderType!,
-                            "location": GeoPoint(latitude: self.lat, longitude: self.lon),
-                            "number": self.numberField.text!
-                            // fix force unwrapping later
-                            ]) { (error) in
-                            if let e = error {
-                                //print("There was an issue saving data to firestore.", e)
-                            } else {
-                                //print("Successfully saved data.")
-                            }
-                        }
-                        var lookForEr: String {
-                            return lookFor + "er"
-                        }
-                        var lookForErs: String {
-                            return lookFor + "ers"
-                        }
                         self.availableMessage = "There are no available \(lookForErs) at the moment. Your contact has been saved and when a \(lookForEr) registers, you will be contacted!"
                         self.performSegue(withIdentifier: "infoToConnection", sender: self)
                         
