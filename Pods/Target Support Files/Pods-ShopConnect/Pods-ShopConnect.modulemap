@@ -1,0 +1,6 @@
+framework module Pods_ShopConnect {
+  umbrella header "Pods-ShopConnect-umbrella.h"
+
+  export *
+  module * { export * }
+}
