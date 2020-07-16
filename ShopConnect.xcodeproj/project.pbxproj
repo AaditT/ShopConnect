@@ -12,12 +12,9 @@
 		863B95BA24B8F8B0004F8088 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863B95B924B8F8B0004F8088 /* InfoViewController.swift */; };
 		8695FFEB24B5949F001A1F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695FFEA24B5949F001A1F80 /* AppDelegate.swift */; };
 		8695FFED24B5949F001A1F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695FFEC24B5949F001A1F80 /* SceneDelegate.swift */; };
-		8695FFEF24B5949F001A1F80 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695FFEE24B5949F001A1F80 /* WelcomeViewController.swift */; };
 		8695FFF224B5949F001A1F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8695FFF024B5949F001A1F80 /* Main.storyboard */; };
 		8695FFF424B594A1001A1F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8695FFF324B594A1001A1F80 /* Assets.xcassets */; };
 		8695FFF724B594A1001A1F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8695FFF524B594A1001A1F80 /* LaunchScreen.storyboard */; };
-		86F3214824B5A50400531598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F3214724B5A50400531598 /* RegisterViewController.swift */; };
-		86F3214A24B5A96B00531598 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F3214924B5A96B00531598 /* LoginViewController.swift */; };
 		86F3214C24B5AAD100531598 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F3214B24B5AAD100531598 /* GoogleService-Info.plist */; };
 		86F3214F24B7946300531598 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F3214E24B7946300531598 /* ChoiceController.swift */; };
 /* End PBXBuildFile section */
@@ -29,13 +26,10 @@
 		8695FFE724B5949F001A1F80 /* ShopConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8695FFEA24B5949F001A1F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8695FFEC24B5949F001A1F80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8695FFEE24B5949F001A1F80 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8695FFF124B5949F001A1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8695FFF324B594A1001A1F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8695FFF624B594A1001A1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8695FFF824B594A1001A1F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86F3214724B5A50400531598 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		86F3214924B5A96B00531598 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		86F3214B24B5AAD100531598 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		86F3214E24B7946300531598 /* ChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		8D3DED04694E52BA78BAAF53 /* Pods-ShopConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopConnect.debug.xcconfig"; path = "Target Support Files/Pods-ShopConnect/Pods-ShopConnect.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,9 +101,6 @@
 		86F3214D24B7944400531598 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8695FFEE24B5949F001A1F80 /* WelcomeViewController.swift */,
-				86F3214724B5A50400531598 /* RegisterViewController.swift */,
-				86F3214924B5A96B00531598 /* LoginViewController.swift */,
 				86F3214E24B7946300531598 /* ChoiceController.swift */,
 				863B95B924B8F8B0004F8088 /* InfoViewController.swift */,
 				86399F7424BB86B2009FFB1C /* ConnectedViewController.swift */,
@@ -236,11 +227,8 @@
 				863B95BA24B8F8B0004F8088 /* InfoViewController.swift in Sources */,
 				86F3214F24B7946300531598 /* ChoiceController.swift in Sources */,
 				86399F7524BB86B2009FFB1C /* ConnectedViewController.swift in Sources */,
-				8695FFEF24B5949F001A1F80 /* WelcomeViewController.swift in Sources */,
 				8695FFEB24B5949F001A1F80 /* AppDelegate.swift in Sources */,
 				8695FFED24B5949F001A1F80 /* SceneDelegate.swift in Sources */,
-				86F3214A24B5A96B00531598 /* LoginViewController.swift in Sources */,
-				86F3214824B5A50400531598 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

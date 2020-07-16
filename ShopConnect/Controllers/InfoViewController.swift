@@ -19,6 +19,9 @@ class InfoViewController: UIViewController {
     var lon: Double = 0
     var orderType: String?
     
+
+    
+    @IBOutlet weak var useLabel: UIButton!
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var myMap: MKMapView!
     let locationManager = CLLocationManager()
@@ -26,8 +29,13 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(InfoViewController.didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
     }
-    
+    @objc func didTapView(){
+      self.view.endEditing(true)
+    }
     @IBAction func getLocationPressed(_ sender: UIButton) {
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -82,10 +90,14 @@ class InfoViewController: UIViewController {
                         } else {
                             self.typeLabelText = "Your Deliverer:"
                         }
-                        self.performSegue(withIdentifier: "infoToConnection", sender: self)
+                        DispatchQueue.main.asyncAfter(deadline:.now() + 1.5, execute: {
+                            self.performSegue(withIdentifier: "infoToConnection", sender: self)
+                        })
                     } else {
                         self.availableMessage = "There are no available \(lookForErs) at the moment. Your contact has been saved and when a \(lookForEr) registers, you will be contacted!"
-                        self.performSegue(withIdentifier: "infoToConnection", sender: self)
+                        DispatchQueue.main.asyncAfter(deadline:.now() + 1.5, execute: {
+                            self.performSegue(withIdentifier: "infoToConnection", sender: self)
+                        })
                         
                     }
                 }
@@ -100,6 +112,7 @@ class InfoViewController: UIViewController {
             destinationVC.availableMessage = availableMessage
             destinationVC.number = number
             destinationVC.typeLabelText = typeLabelText
+
         }
     }
 }
@@ -136,6 +149,7 @@ extension InfoViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         numberField.endEditing(true)
+        
         //print(numberField.text!)
         return true
     }

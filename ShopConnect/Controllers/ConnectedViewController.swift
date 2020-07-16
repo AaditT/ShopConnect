@@ -9,16 +9,23 @@
 import Foundation
 import UIKit
 
+
 class ConnectedViewController: UIViewController {
     
     var availableMessage: String?
     var number: String?
     var typeLabelText: String?
     
+    var userLat: Double?
+    var userLon: Double?
+    var otherLat: Double?
+    var otherLon: Double?
+
+    
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var unavailableMessage: UILabel!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,3 +46,6 @@ class ConnectedViewController: UIViewController {
     
     
 }
+
+
+

@@ -11,5 +11,6 @@ target 'ShopConnect' do
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'PhoneNumberKit', '~> 3.1'
 
 end
